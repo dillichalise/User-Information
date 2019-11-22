@@ -1,0 +1,65 @@
+﻿<div class="panel panel-primary" id="content" #content>
+    <div class="panel-heading">
+        <h1>User Information of {{currentUser.username}}.</h1>
+    </div>
+    <br>
+
+    <div class="panel-body">
+
+
+        <table>
+            <tr>
+                <th>Attribute Name</th>
+                <th>Values</th>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>{{currentUser.firstName}}</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>{{currentUser.lastName}}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{currentUser.email}}</td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>{{currentUser.gender}}</td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td>{{currentUser.username}}</td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td>{{currentUser.phoneNumber}}</td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td>{{currentUser.dateOfBirth}}</td>
+            </tr>
+            <tr>
+                <td>Image:</td>
+                <td>{{currentUser.imageUpload}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<p><a [routerLink]="['/login']">Logout</a></p>
+<button type="button" (click)="savePDF()" class="btn btn-primary">Download PDF</button>
+
+<div>
+    <ul>
+        <li *ngFor="let user of users">
+
+            <div>
+                {{user.username}} ({{user.firstName}} {{user.lastName}})
+                - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+            </div>
+
+        </li>
+    </ul>
+</div>
