@@ -28,7 +28,7 @@
     "@types/pdfmake": "^0.1.8",
     "core-js": "^2.5.5",
     "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "ng2-file-upload": "^1.4.0",
     "pdfmake": "^0.1.62",
     "rxjs": "^6.1.0",
